@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "3da59a94-6436-477e-bd4f-562bb4c43169",
+		"name": "XMen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "isMutant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dna\" : [\"ATGCGA\", \"CAGTGC\", \"TTATGT\", \"AGAAGG\", \"CCCCTA\", \"TCACTG\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cancaba/xmen/api/v1/mutant",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cancaba",
+						"xmen",
+						"api",
+						"v1",
+						"mutant"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "4796224b-826f-49f4-b00a-391be8f79d01",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "1cc576ad-b9a2-4dd0-85b1-e09400c14718",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "df5bcc93-6eeb-4574-880e-19ad5244e62c",
+			"key": "host",
+			"value": "http://localhost:8080"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
