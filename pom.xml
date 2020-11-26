@@ -16,7 +16,7 @@
 	<description>Servicios de Rest para prueba meli</description>
 
 	<properties>
-		<!-- <java.version>11</java.version>-->
+		<java.version>11</java.version>
 		<springfox-version>2.7.0</springfox-version>
 		<jacoco.percentage.instruction>0.9</jacoco.percentage.instruction>
 	</properties>
