@@ -1,4 +1,4 @@
-# Servicios de proyecto prueba meli (Xmen) #
+# Servicios de proyecto prueba meli (Xmen) Desafio: Nivel 3#
 
 Servicios REST para el proyecto xmen
 
@@ -24,8 +24,6 @@ En caso de que sea necesario agregar una nueva propiedad de configuración se de
 
 ### Instrucciones de compilación ###
 
-Antes de subir el codigo fuente a los repositorios ejecutar las siguientes tareas maven:
-
 * **mvn clean install:** esta tarea ejecuta todas las tareas necesarias de compilación, ejecución de pruebas unitarias y verificación de cobertura.
 
 También se pueden ejecutar las siguientes tareas de manera separada:
@@ -36,7 +34,7 @@ También se pueden ejecutar las siguientes tareas de manera separada:
 
 ### Pruebas unitarias ###
 
-Las pruebas unitarias se encuentran en /src/test y fueron realizadas con JUnit 5 y Mockito, los paquetes de cada prueba se deben llamar igual que el paquete donde se encuentra la clase a probar, el nombre de cada prueba debe finalizar con “Test” para que pueda ser ejecutada por JUnit. Es **importante** tener en cuenta que la inyección de dependencias de Spring Boot debe realizarse a través de constructores y no a través de la anotación @Autowired para que se puedan inyectar mocks en las pruebas unitarias, si esty no se realiza, las objectos de tipo Mock no serán inyectadas y se generaran errores al ejecutar las pruebas unitarias.
+Las pruebas unitarias se encuentran en /src/test y fueron realizadas con JUnit 5 y Mockit. Es **importante** tener en cuenta que la inyección de dependencias de Spring Boot debe realizarse a través de constructores y no a través de la anotación @Autowired para que se puedan inyectar mocks en las pruebas unitarias, si esto no se realiza, las objectos de tipo Mock no serán inyectadas y se generaran errores al ejecutar las pruebas unitarias.
 
 ### Verificación de código estático ###
 
@@ -67,3 +65,10 @@ Para generar el archivo Jar con todo lo necesario para ejecutar el proyecto sin 
 **mvn clean compile package**
 
 El archivo Jar generado quedara ubicado en la carpeta /target.
+
+### Deploy en heroku###
+
+El API se encuentra desplegado en Heroku.
+La url de acceso para el primer endpoint es POST https://xmen-mutants.herokuapp.com/cancaba/xmen/api/v1/mutant/
+La url de acceso para el segundo endpoint es GET https://xmen-mutants.herokuapp.com/cancaba/xmen/api/v1/mutant/stats
+La base de datos utilizada es postgres, también alojada en heroku.   es://vtlgxeoprhwxzr:778af1a2df79c1d175d38ae36f3faab2e696e50ca1e77050f90031b75a9bfb06@ec2-54-157-78-113.compute-1.amazonaws.com:5432/d7dkjnhdn401n3
